@@ -3,77 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joy Ngera | Portfolio</title>
+  <title>Joy Ngera | Software Engineer</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
   <header>
+    <h1>Joy Ngera</h1>
+    <p>Software Engineer | Full-Stack Developer | Cloud Enthusiast</p>
     <nav>
-      <h1 class="logo">Joy Ngera</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h2>Software Engineer</h2>
-    <p>Building scalable apps, cloud solutions, and automation systems.</p>
-    <a href="#projects" class="btn">See Projects</a>
-  </section>
-
-  <!-- About -->
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a software engineer passionate about creating impactful solutions — from web-based platforms to automated systems. Skilled in full-stack development, cloud (AWS), and system design.</p>
+    <p>I’m a passionate software engineer specializing in building scalable web-based systems, cloud-native apps, and automated platforms. I love turning complex problems into simple solutions through clean code and thoughtful design.</p>
   </section>
 
-  <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Agrisphere</h3>
-        <p>A web-based agri-ecommerce platform.</p>
-        <a href="https://github.com/yourusername/agrisphere" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="card">
-        <h3>Autopay</h3>
-        <p>An automated payroll system.</p>
-        <a href="https://github.com/yourusername/autopay" target="_blank">View on GitHub →</a>
-      </div>
-    </div>
+    <div id="project-list"></div>
   </section>
 
-  <!-- Skills -->
   <section id="skills">
     <h2>Skills</h2>
-    <ul class="skills">
-      <li>Full-Stack Development</li>
-      <li>AWS & Cloud Solutions</li>
-      <li>Python, PHP, JavaScript</li>
+    <ul>
+      <li>Full-Stack Development (PHP, JavaScript, Python)</li>
       <li>Databases (MySQL, MongoDB)</li>
-      <li>Networking (CCNA, IoT)</li>
+      <li>Cloud & DevOps (AWS, CI/CD)</li>
+      <li>APIs & Integrations</li>
     </ul>
   </section>
 
-  <!-- Contact -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>📧 <a href="mailto:ngerajoy4@gmail.com">ngerajoy4@gmail.com</a></p>
-    <p>🔗 <a href="https://linkedin.com/in/joy-ngera" target="_blank">LinkedIn</a></p>
-    <p>💻 <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+    <p>Email: <a href="mailto:ngerajoy4@gmail.com">ngerajoy4@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/joyngera" target="_blank">github.com/joyngera</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/joy-ngera" target="_blank">linkedin.com/in/joy-ngera</a></p>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Joy Ngera</p>
+    <p>© 2025 Joy Ngera | Built with ❤️ and GitHub Pages</p>
   </footer>
+
+  <script>
+    fetch('projects.json')
+      .then(response => response.json())
+      .then(projects => {
+        const container = document.getElementById('project-list');
+        projects.forEach(p => {
+          const card = document.createElement('div');
+          card.className = 'project-card';
+          card.innerHTML = `
+            <h3>${p.title}</h3>
+            <p>${p.description}</p>
+            <a href="${p.link}" target="_blank">View on GitHub</a>
+          `;
+          container.appendChild(card);
+        });
+      });
+  </script>
 </body>
 </html>
