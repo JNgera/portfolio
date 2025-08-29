@@ -2,11 +2,13 @@
   {
     "title": "Hospital Management System",
     "description": "A scalable hospital system with patient records, pharmacy, lab, and billing modules.",
-    "link": "https://github.com/joyngera/hospital-system"
+    "link": "https://github.com/joyngera/hospital-system",
+    "images": []
   },
   {
     "title": "Automated Payroll System",
     "description": "Integrated with a bank API for seamless salary processing and reporting.",
-    "link": "https://github.com/joyngera/payroll-system"
+    "link": "https://github.com/joyngera/payroll-system",
+    "images": ["autopay1.png", "autopay2.png", "autopay3.png"]
   }
 ]
