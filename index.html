@@ -62,7 +62,17 @@
           let screenshots = '';
           if (p.images && p.images.length > 0) {
             screenshots = '<div class="project-images">' +
-              p.images.map(img => `<img src="images/${img}" alt="${p.title} screenshot">`).join('') +
+              p.images.map(img => `<img src="${img}" alt="${p.title} screenshot">`).join('') +
+              '</div>';
+          }
+
+          // Build links (supports multiple links like GitHub + Live Demo)
+          let links = '';
+          if (p.links) {
+            links = '<div class="project-links">' +
+              Object.entries(p.links).map(([label, url]) => `
+                <a href="${url}" target="_blank" class="btn">${label}</a>
+              `).join('') +
               '</div>';
           }
 
@@ -70,7 +80,7 @@
             <h3>${p.title}</h3>
             <p>${p.description}</p>
             ${screenshots}
-            <a href="${p.link}" target="_blank">View on GitHub</a>
+            ${links}
           `;
           container.appendChild(card);
         });
