@@ -24,7 +24,7 @@
     "description": "A machine learning web app that predicts student dropout likelihood using Random Forest, deployed with Streamlit Cloud.",
     "links": {
       "Live Demo": "https://studentdropoutapp.streamlit.app/",
-      "GitHub": "https://github.com/joyngera/student-dropout-prediction"
+      "GitHub": "https://github.com/JNgera/student-dropout-app"
     },
     "images": [
       "images/dropout1.png"
