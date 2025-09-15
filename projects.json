@@ -15,4 +15,14 @@
       "images/autopay3.png"
     ]
   }
+  {
+  "title": "Student Dropout Prediction App",
+  "description": "A machine learning web app that predicts student dropout likelihood using Random Forest, deployed with Streamlit Cloud.",
+  "link": "https://your-streamlit-link.streamlit.app",
+  "images": [
+    "images/dropout1.png",
+    "images/dropout2.png"
+  ]
+}
+
 ]
