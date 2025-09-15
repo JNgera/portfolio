@@ -12,6 +12,7 @@
     "description": "Integrated with a bank API for seamless salary processing and reporting.",
     "links": {
       "GitHub": "https://github.com/JNgera/payroll-system"
+      "Live Demo": "https://autopaysystem.streamlit.app/"
     },
     "images": [
       "images/Autopay1.png",
